@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee List</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+    <h2>EMS</h2>
+
+    <ul>
+        <li><a href="dashboard.html">🏠 Dashboard</a></li>
+        <li><a href="employeeList.html">👨‍💼 Employees List</a></li>
+        <li><a href="addEmployee.html">➕ Add Employee</a></li>
+        <li><a href="#">⚙️ Settings</a></li>
+        <li><a href="#" onclick="logout()">🚪 Logout</a></li>
+    </ul>
+</div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <div class="header">
+            <h1>Employee List</h1>
+            <p>View and Manage Employees</p>
+        </div>
+
+        <div class="card">
+
+            <input type="text" placeholder="🔍 Search Employee..." id="searchBox">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Designation</th>
+                        <th>Salary</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="employeeTableBody">
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="employee.js"></script>
+
+</body>
+</html>

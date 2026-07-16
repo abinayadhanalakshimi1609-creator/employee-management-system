@@ -1,0 +1,252 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+.container{
+    display:flex;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:250px;
+    min-height:100vh;
+    background:#1e3a8a;
+    color:white;
+    padding:20px;
+}
+
+.sidebar h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    padding:15px;
+    margin-bottom:10px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.sidebar ul li:hover{
+    background:#2563eb;
+}
+
+/* Main */
+
+.main{
+    flex:1;
+    padding:30px;
+}
+
+.header{
+    margin-bottom:30px;
+}
+
+.header h1{
+    color:#1e3a8a;
+    margin-bottom:8px;
+}
+
+.header p{
+    color:#666;
+}
+
+/* Cards */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    color:#2563eb;
+    margin-bottom:10px;
+    font-size:32px;
+}
+
+.card p{
+    color:#555;
+}
+
+
+/* addEmployee */
+
+/* ---------- Form Styling ---------- */
+
+form{
+    margin-top:20px;
+}
+
+form input,
+form textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    font-size:15px;
+    outline:none;
+}
+
+form input:focus,
+form textarea:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 5px rgba(37,99,235,0.3);
+}
+
+form button{
+    width:100%;
+    padding:12px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+form button:hover{
+    background:#1d4ed8;
+}
+
+.sidebar ul li a{
+    color:white;
+    text-decoration:none;
+    display:block;
+}
+
+
+form select{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    font-size:15px;
+    background:#f8fafc;
+    color:#555;
+    outline:none;
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+}
+
+form select:focus{
+    border-color:#2563eb;
+    background:#ffffff;
+    box-shadow:0 0 5px rgba(37,99,235,0.3);
+}
+
+form select option{
+    background:#ffffff;
+    color:#333;
+}
+form label{
+    display:block;
+    margin-bottom:6px;
+    color:#555;
+    font-size:15px;
+    font-weight:600;
+}
+input,
+select,
+textarea{
+    background:#f8fafc !important;
+    color:#333 !important;
+}
+
+
+/* Employee list */
+
+/* ========================= */
+/* Employee List Table Style */
+/* ========================= */
+
+#searchBox{
+    width:100%;
+    padding:12px;
+    margin-bottom:20px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    font-size:15px;
+    outline:none;
+    background:#f8fafc;
+}
+
+#searchBox:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 5px rgba(37,99,235,0.3);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+    background:#fff;
+}
+
+table th{
+    background:#2563eb;
+    color:#fff;
+    padding:14px;
+    text-align:left;
+}
+
+table td{
+    padding:14px;
+    border-bottom:1px solid #e5e7eb;
+}
+
+table tr:hover{
+    background:#f8fafc;
+}
+
+table button{
+    padding:8px 14px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    margin-right:8px;
+    font-size:14px;
+}
+
+table button:first-child{
+    background:#22c55e;
+    color:#fff;
+}
+
+table button:last-child{
+    background:#ef4444;
+    color:#fff;
+}
+
+table button:hover{
+    opacity:0.9;
+}
