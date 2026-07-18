@@ -11,7 +11,7 @@ app.use(express.json());
 app.use("/api", employeeRoutes);
 app.use("/api", authRoutes);
 
-mongoose.connect(process.env.MONGODB_URL)
+mongoose.connect("mongodb://127.0.0.1:27017/employeeDB")
 .then(() => {
     console.log("MongoDB Connected Successfully");
 })
