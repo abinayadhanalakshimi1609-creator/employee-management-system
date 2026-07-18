@@ -11,7 +11,7 @@ if (loginForm) {
 
         try {
 
-            const response = await fetch("https://employee-management-q9zb.onrender.com", {
+            const response = await fetch("https://employee-management-q9zb.onrender.com/api/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
