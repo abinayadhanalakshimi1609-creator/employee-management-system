@@ -252,6 +252,6 @@ function logout() {
     localStorage.removeItem("isLoggedIn");
 
     alert("Logout Successful");
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 
 }
