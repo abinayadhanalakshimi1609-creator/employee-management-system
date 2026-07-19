@@ -1,47 +1,36 @@
 # Employee Management System
 
-## 📌 Project Overview
-Employee Management System is a Full Stack Web Application developed to manage employee records efficiently. The system allows an administrator to perform all basic employee management operations through a simple and user-friendly interface.
+## Live Demo
+Frontend:
+https://employee-management-system-8au6.onrender.com
 
-## ✨ Features
-- 🔐 Admin Login
-- 📊 Dashboard
-- ➕ Add Employee
-- 📋 View Employees
-- ✏️ Edit Employee
-- 🗑️ Delete Employee
-- 🔍 Search Employees
-- 📈 Dynamic Dashboard Statistics
+Backend API:
+https://employee-management-q9zb.onrender.com
 
-## 🛠️ Technologies Used
-- HTML5
-- CSS3
+## Technologies Used
+- HTML
+- CSS
 - JavaScript
 - Node.js
 - Express.js
-- MongoDB
+- MongoDB Atlas
 - Mongoose
+- GitHub
+- Render
 
-## 📂 Project Structure
+## Features
+- Admin Login
+- Dashboard
+- Add Employee
+- View Employee List
+- Edit Employee
+- Delete Employee
+- Search Employee
+- Responsive Design
+- Cloud Database (MongoDB Atlas)
+- Live Deployment
 
-Employee-Management-System/
-│
-├── frontend/
-├── backend/
-├── node_modules/
-├── package.json
-└── README.md
-
-## 🚀 How to Run
-
-1. Clone the repository
-2. Install dependencies:
-   npm install
-3. Start MongoDB
-4. Run the backend:
-   node server.js
-5. Open the frontend in your browser
-
-## 👩‍💻 Developed By
-
-**Abinaya**
+## Deployment
+- Frontend: Render Static Site
+- Backend: Render Web Service
+- Database: MongoDB Atlas
