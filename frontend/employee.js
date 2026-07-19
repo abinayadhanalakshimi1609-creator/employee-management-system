@@ -23,8 +23,8 @@ employeeForm.addEventListener("submit", async function(e){
     const editEmployeeId = localStorage.getItem("editEmployeeId");
 
 const url = editEmployeeId
-    ? `http://localhost:5000/api/employees/${editEmployeeId}`
-    : "http://localhost:5000/api/employees";
+    ? `https://employee-management-q9zb.onrender.com/api/employees/${editEmployeeId}`
+    : "https://employee-management-q9zb.onrender.com/api/employees";
 
 const method = editEmployeeId ? "PUT" : "POST";
 
@@ -59,7 +59,7 @@ const employeeTableBody = document.getElementById("employeeTableBody");
 
 if (employeeTableBody) {
 
-    fetch("http://localhost:5000/api/employees")
+    fetch("https://employee-management-q9zb.onrender.com/api/employees")
         .then(response => response.json())
         .then(employees => {
 
@@ -99,7 +99,7 @@ async function deleteEmployee(id) {
 
     try {
 
-        const response = await fetch(`http://localhost:5000/api/employees/${id}`, {
+        const response = await fetch(`https://employee-management-q9zb.onrender.com/api/employees/${id}`, {
             method: "DELETE"
         });
 
@@ -189,7 +189,7 @@ if (employeeForm) {
 
     if (editEmployeeId) {
 
-        fetch(`http://localhost:5000/api/employees/${editEmployeeId}`)
+        fetch(`https://employee-management-q9zb.onrender.com/api/employees/${editEmployeeId}`)
         .then(response => response.json())
         .then(employee => {
 
@@ -221,7 +221,7 @@ const dashboardPendingRequests = document.getElementById("pendingRequests");
 
 if (dashboardTotalEmployees) {
 
-    fetch("http://localhost:5000/api/employees")
+    fetch("https://employee-management-q9zb.onrender.com/api/employees")
         .then(response => response.json())
         .then(employees => {
 
