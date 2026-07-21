@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -11,7 +12,9 @@ app.use(express.json());
 app.use("/api", employeeRoutes);
 app.use("/api", authRoutes);
 
+// console.log(process.env.MONGO_URI)
 mongoose.connect(process.env.MONGO_URI)
+// mongoose.connect("mongodb://127.0.0.1:27017/employeeDB")
 .then(() => {
     console.log("MongoDB Connected Successfully");
 })
