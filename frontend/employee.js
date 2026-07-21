@@ -1,4 +1,5 @@
 // Get Employee Form
+// alert("NEW employee.js Loaded");
 const employeeForm = document.getElementById("employeeForm");
 
 if(employeeForm){
@@ -28,6 +29,8 @@ const url = editEmployeeId
 
 const method = editEmployeeId ? "PUT" : "POST";
 
+
+alert(url);
 const response = await fetch(url, {
     method: method,
     headers: {
