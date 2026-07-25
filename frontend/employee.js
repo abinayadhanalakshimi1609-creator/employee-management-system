@@ -30,14 +30,14 @@ const url = editEmployeeId
 const method = editEmployeeId ? "PUT" : "POST";
 
 
-alert(url);
-const response = await fetch(url, {
-    method: method,
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify(employee)
-});
+// alert(url);
+// const response = await fetch(url, {
+//     method: method,
+//     headers: {
+//         "Content-Type": "application/json"
+//     },
+//     body: JSON.stringify(employee)
+// });
 
 const data = await response.json();
 
