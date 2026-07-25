@@ -1,5 +1,5 @@
 // Get Employee Form
-// alert("NEW employee.js Loaded");
+// alert("employee.js Loaded");
 const employeeForm = document.getElementById("employeeForm");
 
 if(employeeForm){
@@ -7,6 +7,7 @@ if(employeeForm){
 employeeForm.addEventListener("submit", async function(e){
 
     e.preventDefault();
+    console.log("Submit clicked");
 
     const employee = {
         id: document.getElementById("employeeId").value,
@@ -31,13 +32,13 @@ const method = editEmployeeId ? "PUT" : "POST";
 
 
 // alert(url);
-// const response = await fetch(url, {
-//     method: method,
-//     headers: {
-//         "Content-Type": "application/json"
-//     },
-//     body: JSON.stringify(employee)
-// });
+const response = await fetch(url, {
+    method: method,
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(employee)
+});
 
 const data = await response.json();
 
