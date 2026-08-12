@@ -1,9 +1,10 @@
-require("dotenv").config();
+require("dotenv").config({ path: "./backend/.env" });
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const employeeRoutes = require("./routes/employeeRoutes");
 const authRoutes = require("./routes/authRoutes");
+const settingsRoutes = require("./routes/settingsRoutes");
 
 const app = express();
 
@@ -11,8 +12,9 @@ app.use(cors());
 app.use(express.json());
 app.use("/api", employeeRoutes);
 app.use("/api", authRoutes);
+app.use("/api", settingsRoutes);
 
-// console.log(process.env.MONGO_URI)
+console.log(process.env.MONGO_URI)
 mongoose.connect(process.env.MONGO_URI)
 // mongoose.connect("mongodb://127.0.0.1:27017/employeeDB")
 .then(() => {

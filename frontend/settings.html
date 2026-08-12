@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>EMS</h2>
+
+        <ul>
+            <li><a href="dashboard.html">🏠 Dashboard</a></li>
+            <li><a href="addEmployee.html">➕ Add Employee</a></li>
+            <li><a href="employeeList.html">👨‍💼 Employee List</a></li>
+            <li><a href="settings.html">⚙️ Settings</a></li>
+            <li><a href="#" onclick="logout()">🚪 Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <div class="header">
+            <h1>Settings</h1>
+            <p>Update Admin Profile</p>
+        </div>
+
+        <div class="card">
+
+            <form id="settingsForm">
+
+                <label for="adminName">Admin Name</label>
+                <input type="text" id="adminName" placeholder="Enter Admin Name" required>
+
+                <label for="adminEmail">Email</label>
+                <input type="email" id="adminEmail" placeholder="Enter Email Address" required>
+
+                <label for="adminPhone">Phone Number</label>
+                <input type="tel" id="adminPhone" placeholder="Enter Phone Number" required>
+
+                <label for="password">New Password</label>
+                <input type="password" id="password" placeholder="Enter New Password">
+
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm New Password">
+
+                <button type="submit">Save Changes</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="settings.js"></script>
+
+</body>
+</html>
