@@ -1,22 +1,46 @@
+const Settings = require("../models/Settings");
+
 exports.login = async (req, res) => {
 
     const { email, password } = req.body;
 
-    if (
-        email === "admin@gmail.com" &&
-        password === "admin123"
-    ) {
+    try {
 
-        res.json({
-            success: true,
-            message: "Login Successful"
-        });
+        const settings = await Settings.findOne();
 
-    } else {
+        if (!settings) {
+            return res.status(401).json({
+                success: false,
+                message: "Admin settings not found"
+            });
+        }
 
-        res.status(401).json({
+        if (
+            email === settings.adminEmail &&
+            password === settings.password
+        ) {
+
+            return res.json({
+                success: true,
+                message: "Login Successful"
+            });
+
+        } else {
+
+            return res.status(401).json({
+                success: false,
+                message: "Invalid Email or Password"
+            });
+
+        }
+
+    } catch (error) {
+
+        console.log(error);
+
+        res.status(500).json({
             success: false,
-            message: "Invalid Email or Password"
+            message: "Server Error"
         });
 
     }
